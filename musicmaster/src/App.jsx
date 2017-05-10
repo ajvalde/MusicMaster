@@ -23,6 +23,7 @@ search() {
      .then(json => {
          const artist = json.artists.items[0];
          console.log(artist)
+         this.setState({artist});
      })
 }
 
