@@ -8,7 +8,8 @@ class App extends Component {
         super(props);
         this.state = {
             query: '',
-            artist: null
+            artist: null,
+            tracks: []
         }
     }
 
@@ -33,6 +34,8 @@ search() {
          .then(response => response.json())
          .then(json => {
              console.log('artist top track', json)
+             const { tracks } = json;
+             this.setState({tracks});
          })
      })
 }
