@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css'
 import { FormGroup, FormControl, InputGroup, Glyphicon} from 'react-bootstrap';
 import Profile from './profile'
+import Gallery from './gallery';
 
 class App extends Component {
     constructor(props) {
@@ -69,9 +70,9 @@ render() {
                  <Profile
                     artist={this.state.artist}
                  />
-                <div className="Gallery">
-                    Gallery
-                </div>
+                <Gallery 
+                    tracks={this.state.tracks}
+                />
              </div>
             : <div></div>
             }
