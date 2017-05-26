@@ -25,7 +25,6 @@ search() {
      .then(response => response.json())
      .then(json => {
          const artist = json.artists.items[0];
-         console.log(artist)
          this.setState({artist});
 
          FETCH_URL = `${ALBUM_URL}${artist.id}/top-tracks?country=US&`
@@ -34,7 +33,6 @@ search() {
          })
          .then(response => response.json())
          .then(json => {
-             console.log('artist top track', json)
              const { tracks } = json;
              this.setState({tracks});
          })
